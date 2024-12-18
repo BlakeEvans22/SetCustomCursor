@@ -1,0 +1,1 @@
+﻿Invoke-WebRequest -Uri "https://raw.githubusercontent.com/BlakeEvans22/SetCustomCursor/refs/heads/main/Set-CustomCursor.ps1" -OutFile "$env:ProgramData\Set-CustomCursor.ps1"; Start-Process -FilePath "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$env:ProgramData\Set-CustomCursor.ps1`"" -Wait -Verb RunAs
