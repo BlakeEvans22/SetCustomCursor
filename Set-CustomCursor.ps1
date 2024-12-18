@@ -72,11 +72,11 @@ try {
     # Define the action and triggers
     $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
     $triggerAtStartup = New-ScheduledTaskTrigger -AtStartup
-    $triggerEvery15Minutes = New-ScheduledTaskTrigger -Daily -At (Get-Date).Date
+    $triggerAtMidnight = New-ScheduledTaskTrigger -Daily -At (Get-Date).Date
 
     # Register the scheduled task
     try {
-        Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $triggerAtStartup, $triggerEvery15Minutes -RunLevel Highest -ErrorAction Stop
+        Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $triggerAtStartup, $triggerAtMidnight -RunLevel Highest -ErrorAction Stop
         Write-Output "Scheduled task '$taskName' created successfully."
     } catch {
         Write-Error "Failed to create scheduled task: $_"
