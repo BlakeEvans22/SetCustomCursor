@@ -1,6 +1,6 @@
 # Define variables
-$cursorUrl = "http://www.rw-designer.com/cursor-download.php?id=129430"
-$cursorPath = "$env:SystemRoot\Cursors\Squidward 4.ani"
+$cursorUrl = "http://www.rw-designer.com/cursor-download.php?id=14255"
+$cursorPath = "$env:SystemRoot\Cursors\malware.ani"
 $scriptPath = "$env:ProgramData\Set-CustomCursor.ps1"
 $taskName = "ANUS (Automated Network Update System)"
 
